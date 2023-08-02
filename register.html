@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Login Form Design | CodeLab</title>
-      <link rel="stylesheet" href="assets\css\login_style.css">
-   </head>
-   <body>
-      <div class="wrapper">
-         <div class="title">
-            Register Form
-         </div>
-         <form action="#">
-            <div class="field">
-                <input type="text" required>
-                <label>Full Name</label>
-             </div>
-            <div class="field">
-               <input type="text" required>
-               <label>Email Address</label>
-            </div>
-            <div class="field">
-               <input type="password" required>
-               <label>Password</label>
-            </div>
-            <div class="content">
-                <label>Male</label>
 
-                <input type="radio" required >
-                <label>Female</label>
+<head>
+   <meta charset="utf-8">
+   <title>Login Form Design | CodeLab</title>
+   <link rel="stylesheet" href="assets\css\login_style.css">
 
-                <input type="radio" required >
-             </div>
-            <div class="content">
-               <div class="checkbox">
-                  <input type="checkbox" id="remember-me">
-                  <label for="remember-me">Remember me</label>
-               </div>
-               <div class="pass-link">
-                  <a href="#">Forgot password?</a>
-               </div>
-            </div>
-            <div class="field">
-               <input type="submit" value="Login">
-            </div>
-            <div class="signup-link">
-               Not a member? <a href="#">Signup now</a>
-            </div>
-         </form>
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="title">
+         Register Form
       </div>
-   </body>
+      <form action="#">
+         <div class="field">
+            <input type="text" required>
+            <label>Full Name</label>
+         </div>
+         <div class="field">
+            <input type="text" required>
+            <label>Email Address</label>
+         </div>
+         <div class="field">
+            <input type="password" required>
+            <label>Password</label>
+         </div>
+         <div class="content">
+            <label>Male</label>
+
+            <input type="radio" name="gender" required>
+            <label>Female</label>
+
+            <input type="radio" name="gender" required>
+         </div>
+
+
+         <div>
+            <select name="nat" id="nat" class="nat">
+               <option value="0">-Select your country-</option>
+               <optgroup label="Middle East">
+                  <option value="jo">Hashemite Kingdom of Jordan</option>
+                  <option>Palestine</option>
+                  <option value="eg" id="egoption">Egypt</option>
+               </optgroup>
+               <optgroup label="Europe">
+                  <option>Germany</option>
+                  <option>Italy</option>
+               </optgroup>
+               <optgroup label="Americas">
+                  <option value="us">USA</option>
+                  <option>Canada</option>
+                  <option>Argentina</option>
+
+               </optgroup>
+
+            </select>
+         </div>
+
+
+         <div class="content">
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me">
+               <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link">
+               <a href="#">Forgot password?</a>
+            </div>
+         </div>
+         <div class="field">
+            <input type="submit" value="Login">
+         </div>
+         <div class="signup-link">
+            Have an account? <a href="login.html">Login now!</a>
+         </div>
+      </form>
+   </div>
+</body>
+
 </html>

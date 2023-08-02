@@ -131,3 +131,10 @@ form .pass-link a:hover,
 form .signup-link a:hover{
   text-decoration: underline;
 }
+
+.nat{
+  align-items: center;
+  text-align: center;
+  color: #262626;
+  margin-left: 40px;
+  }
