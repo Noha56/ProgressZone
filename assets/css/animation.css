@@ -1,0 +1,11 @@
+.animation{
+    height:150px;
+    border: 5px solid yellowgreen;
+    animation: myAnimation 1s ease 1s 5s alternate forwards;
+  }
+  
+  @keyframes myAnimation {
+    100% {
+      border-radius: 60px;
+    }	
+  }
