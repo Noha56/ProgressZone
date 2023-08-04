@@ -11,13 +11,13 @@
          <div class="title">
             Login Form
          </div>
-         <form action="#">
+         <form method="post">
             <div class="field">
-               <input type="text" required>
+               <input type="email" required pattern="[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+(\.[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+)*@([a-zA-Z0-9_][-a-zA-Z0-9_]*(\.[-a-zA-Z0-9_]+)*\.([cC][oO][mM]))(:[0-9]{1,5})?">
                <label>Email Address</label>
             </div>
             <div class="field">
-               <input type="password" required>
+               <input type="text" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                <label>Password</label>
             </div>
             <div class="content">
@@ -33,7 +33,7 @@
                <input type="submit" value="Login">
             </div>
             <div class="signup-link">
-               Not a member? <a href="#">Signup now</a>
+               Not a member? <a href="register.html">Signup now</a>
             </div>
          </form>
       </div>
