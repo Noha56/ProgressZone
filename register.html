@@ -6,6 +6,7 @@
    <meta charset="utf-8">
    <title>Login Form Design | CodeLab</title>
    <link rel="stylesheet" href="assets\css\login_style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 
 </head>
@@ -25,21 +26,25 @@
             <label>Email Address</label>
          </div>
          <div class="field">
-            <input type="password" required>
-            <label>Password</label>
+            <input id="pass" type="password" required onblur="validatePassword()">
+            <label id="passL" >Password</label>
+         </div>
+         <div class="field">
+            <input id="rePass" type="password"  required onblur="validatePassword()" >
+            <label id="rePassL">Check Password</label>
          </div>
          <div class="content">
             <label>Male</label>
 
-            <input type="radio" name="gender" required>
+            <input type="radio" name="gender" id="male" required>
             <label>Female</label>
 
-            <input type="radio" name="gender" required>
+            <input type="radio" name="gender" id="female" required>
          </div>
 
 
          <div>
-            <select name="nat" id="nat" class="nat">
+            <select name="nat" id="nat" class="nat" onblur="validateNa()">
                <option value="0">-Select your country-</option>
                <optgroup label="Middle East">
                   <option value="jo">Hashemite Kingdom of Jordan</option>
@@ -66,9 +71,9 @@
                <input type="checkbox" id="remember-me">
                <label for="remember-me">Remember me</label>
             </div>
-            <div class="pass-link">
+        <!--   <div class="pass-link">
                <a href="#">Forgot password?</a>
-            </div>
+            </div>--> 
          </div>
          <div class="field">
             <input type="submit" value="Login">
@@ -78,6 +83,54 @@
          </div>
       </form>
    </div>
+
+
+   <script>
+      function validatePassword() {
+         var pass = document.getElementById('pass');
+         var passLabel = document.getElementById('passL');
+
+         var rePassLabel=document.getElementById('rePassL');
+         var rePassInput=document.getElementById('rePass');
+         if (pass.value.search(/^\d{8}$/) == -1) {
+            passLabel.style.borderColor = "red";
+            passLabel.style.color = "red";
+            passLabel.innerHTML = "Password should be 8";
+            passLabel.style.display = "block";
+         }
+         else {
+            idText.style.borderColor = "green";
+            passLabel.style.color = "black";
+            passLabel.innerHTML = "";
+            passLabel.style.display = "none";
+         }
+
+
+         if(rePassInput.value==pass.value){
+            rePassInput.style.borderColor = "green";
+            rePassLabel.style.color = "black";
+            rePassLabel.innerHTML = "";
+            rePassLabel.style.display = "none";
+         }else{
+            rePassInput.style.borderColor = "red";
+            rePassLabel.style.color = "red";
+            rePassLabel.innerHTML = "Password not match!";
+            rePassLabel.style.display = "block";
+         }
+      }
+
+      function validateNa(){
+         var checkVal=document.getElementById("nat");
+         if(checkVal.value==0){
+           checkVal.style.borderColor="red";
+           return;
+         }else{
+            checkVal.style.borderColor="green";
+           return;
+         }
+      }
+
+   </script>
 </body>
 
 </html>
