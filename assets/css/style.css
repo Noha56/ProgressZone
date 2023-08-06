@@ -7357,6 +7357,7 @@ del {
 .language-box {
     position: absolute;
     left: 190vh;
+    margin-top: -250px;
 }
 
 div.features-caption:hover {
